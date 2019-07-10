@@ -1,0 +1,18 @@
+Как я понял условие задачи:
+1. Нужно решить использую map
+2. Решить без использования map
+
+Во втором варианте код получился с костылями но все работает)
+
+Входные данные находятся в файле newOne.txt в корне проекта.
+
+Пример работы программы:
+
+Прочитанные слова: [kgkekef, ewmfwkemf, meiwmaalim, ilwmdmksm, a, aaa, skdmdlamla, asmmdkm, b, bbbbbb, bw, ppp, pp, ppz, zzzz, zkjnknk, jwendknzkndknsdnqiljdl, iqjlijq, illa, ial, jail, aaazz, zzerfe, bbb, bbb, bbb, bbb, bbb, bbb, aaa, aaa, asd, azzx, a, a, a, lsjdljld]
+Отсортированные в алфавитном порядке: [a, a, a, a, aaa, aaa, aaa, aaazz, asd, asmmdkm, azzx, b, bbb, bbb, bbb, bbb, bbb, bbb, bbbbbb, bw, ewmfwkemf, ial, illa, ilwmdmksm, iqjlijq, jail, jwendknzkndknsdnqiljdl, kgkekef, lsjdljld, meiwmaalim, pp, ppp, ppz, skdmdlamla, zkjnknk, zzerfe, zzzz]
+[UseMap] Статистика встречаемости слов: {aaa=3, pp=1, meiwmaalim=1, aaazz=1, kgkekef=1, ilwmdmksm=1, zkjnknk=1, iqjlijq=1, bbbbbb=1, skdmdlamla=1, bw=1, ial=1, asmmdkm=1, azzx=1, jwendknzkndknsdnqiljdl=1, a=4, b=1, bbb=6, illa=1, jail=1, ppp=1, asd=1, lsjdljld=1, zzzz=1, zzerfe=1, ppz=1, ewmfwkemf=1}
+[UseMap] Слово с максимальным количеством повторений: bbb
+[UseMap] Количество повторений: 6
+[WithoutMap] Статистика встречаемости слов: a=4, aaa=3, aaazz=1, asd=1, asmmdkm=1, azzx=1, b=1, bbb=6, bbbbbb=1, bw=1, ewmfwkemf=1, ial=1, illa=1, ilwmdmksm=1, iqjlijq=1, jail=1, jwendknzkndknsdnqiljdl=1, kgkekef=1, lsjdljld=1, meiwmaalim=1, pp=1, ppp=1, ppz=1, skdmdlamla=1, zkjnknk=1, zzerfe=1, zzzz=1,
+[WithoutMap] Слово с максимальным количеством повторений: bbb
+[WithoutMap] Количество повторений: 6
