@@ -22,9 +22,14 @@ public class Myclass implements Comparable<Myclass> {
     @Override
     public String toString() {
         return ("{" +
-                "word='" + word + '\'' +
-                ", count=" + count +
+                word +
+                "=" + count +
                 '}');
+    }
+
+
+    void setCount(int count) {
+        this.count = count;
     }
 
     Myclass(String word, int count) {

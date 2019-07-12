@@ -6,41 +6,43 @@ import java.util.*;
 
 public class HwcTwo {
     public static void main(String[] args) throws FileNotFoundException {
-        List<Myclass> myclassList = new ArrayList<>();
-        List<Myclass> myclassListHelp = new ArrayList<>();
-        Set<Myclass> myclassSet = new HashSet<>();
+        List<Myclass> myclassList = new ArrayList<>(); // хранится статистика без повторов
+        List<Myclass> myclassListHelp = new ArrayList<>(); // хрянятся все слова
         Scanner scanner = new Scanner(new File("newOneqw.txt"));
+        int maxcount;
+        int MAXcount = 0;
 
         while (scanner.hasNext()) {
             String word = scanner.useDelimiter("\\s+").next();
-            myclassList.add(new Myclass(word, 1));
+            myclassListHelp.add(new Myclass(word, 1)); // добавляем все слова
+            Myclass m = new Myclass(word, 1);
+            if (!myclassList.contains(m)) {
+                myclassList.add(m);         // добавляем без повтора
+            } else myclassList.get(myclassList.indexOf(m)).setCount(0);
         }
 
-        Collections.sort(myclassList);
-        List<Myclass> listHelp = new ArrayList<>(myclassList); // в помощь
-        listHelp.add(new Myclass("прост", 0));
-
-        int maxcount = 0;
-        int MAXcount = 0;
-        for (int i = 0; i < myclassList.size(); i++) {
-            maxcount++;
-            if (!myclassList.get(i).equals(listHelp.get(i + 1))) {
-                myclassSet.add(new Myclass(myclassList.get(i).word, maxcount)); //добавление в myclassSet для статистики
-                if (maxcount > MAXcount) {
-                    MAXcount = maxcount;
+        for (Myclass value : myclassList) { // изменяем показание счетчика
+            int num = 1;
+            for (Myclass myclass : myclassListHelp) {
+                if (value.equals(myclass)) {
+                    value.setCount(num++);
+                    maxcount = num;
+                    if (maxcount > MAXcount) {
+                        MAXcount = maxcount;
+                    }
                 }
-                maxcount = 0;
             }
         }
-        myclassListHelp.addAll(myclassSet);
-        Collections.sort(myclassListHelp);
-        System.out.println("[WithoutMap] Статистика встречаемости слов: " + myclassListHelp);
+        Collections.sort(myclassList);
+        System.out.println("[WithoutMap] Статистика встречаемости слов: " + myclassList);
         System.out.print("[WithoutMap] Слово(а) с максимальным количеством повторений: ");
-        for (Myclass myclass : myclassListHelp) {
-            if (myclass.count == MAXcount)
+
+        for (Myclass myclass : myclassList) {
+            if (myclass.count == (MAXcount - 1))
                 System.out.print(myclass.word + " ");
         }
+
         System.out.println();
-        System.out.println("[WithoutMap] Количество повторений: " + MAXcount);
+        System.out.println("[WithoutMap] Количество повторений: " + (MAXcount - 1));
     }
 }
