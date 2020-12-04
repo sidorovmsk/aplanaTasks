@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="aplanaFirst:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/aplanaFirst_jar</output-path>
-    <root id="archive" name="aplanaFirst.jar">
-      <element id="module-output" name="aplanaFirst" />
-    </root>
-  </artifact>
-</component>
