@@ -14,7 +14,7 @@ public class Task7 {
         long randomDay = minDay + random.nextInt(maxDay - minDay);
         Scanner scanner = new Scanner(System.in);
         LocalDate randomBirthDate = LocalDate.ofEpochDay(randomDay);
-        System.out.println(randomBirthDate.getMonthValue()+"-"+randomBirthDate.getDayOfMonth() + " - это рандомная дата");
+        System.out.println(randomBirthDate.getMonthValue() + "-" + randomBirthDate.getDayOfMonth() + " - это рандомная дата");
         System.out.println("Введите месяц:");
         int m = scanner.nextInt();
         System.out.println("Введите день:");
