@@ -39,17 +39,17 @@ public class Task1 {
         String s = stringBuilderOO.toString();
 
         int len1;
-        do{
+        do {
             len1 = s.length();//сохраняем длину строки
             s = s.replaceAll("([a-z])\\1", "");
-        }while(len1 != s.length());//сравниваем новую длину строки с сохраненной длиной
+        } while (len1 != s.length());//сравниваем новую длину строки с сохраненной длиной
         String ss = stringBuilderTT.toString();
 
         int len2;
-        do{
+        do {
             len2 = ss.length();//сохраняем длину строки
             ss = ss.replaceAll("([a-z])\\1", "");
-        }while(len2 != ss.length());//сравниваем новую длину строки с сохраненной длиной
+        } while (len2 != ss.length());//сравниваем новую длину строки с сохраненной длиной
         String result = s + ss;
 
         char[] arr = result.toCharArray();
